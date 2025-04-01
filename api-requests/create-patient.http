@@ -1,0 +1,10 @@
+POST http://localhost:4000/patients
+Content-Type: application/json
+
+{
+  "name": "Raja Das",
+  "email": "raja@gmail.com",
+  "address": "213 ram nagar",
+  "dateOfBirth": "1965-09-09",
+  "registeredDate": "2025-04-02"
+}

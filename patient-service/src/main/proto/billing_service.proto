@@ -1,0 +1,22 @@
+syntax = "proto3"; //version of proto
+
+option java_multiple_files = true; //split our service request and response files all into different files
+
+option java_package = "billing"; //code generation inside billing package
+
+service BillingService {  //methods available inside grpc communication
+  rpc CreateBillingAccount(BillingRequest) returns (BillingResponse);
+}
+
+message BillingRequest {  // request object data
+  string patientId = 1;
+  string name = 2;
+  string email= 3;
+}
+
+message BillingResponse { // response object data
+  string accountId = 1;
+  string status = 2;
+}
+
+//This is just a blueprint to generate grpc code.
